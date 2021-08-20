@@ -1,0 +1,15 @@
+You need to make sure that WiringOP is installed on your Orange PI PC. If not, then you need to install it. To do this, run the following commands:
+
+git clone https://github.com/zhaolei/WiringOP.git -b h3
+ 
+cd WiringOP
+chmod +x ./build
+sudo ./build
+
+
+install mariadb
+
+Install Modules##
+
+npm i orange-pi-gpio
+npm i mysql express express-session body-parser path
