@@ -1,10 +1,10 @@
 const express   = require("express");
 const router    = express.Router();
 
-router.get('/', function (request, response, next) {
+router.get("/", function (request, response, next) {
     let data = {
         title: "Easy Control - Painel"
-    }
+    };
     if (request.session.loggedin) {
 		response.setHeader("Content-Type","text/html")
         response.render("painel.html", data);

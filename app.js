@@ -11,7 +11,7 @@ let port = 9000;
 
 app.engine("html", nunjucks.render);
 app.set("view engine", "html");
-app.use(express.static("views/static"))
+app.use(express.static("views/static"));
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
