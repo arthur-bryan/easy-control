@@ -1,65 +1,63 @@
-body{
-    background-color: #bee6e7f5;
-    font-family: sans-serif;
-
+body {
+  background-color: #bee6e7f5;
+  font-family: sans-serif;
 }
 
-.formulario1{
-    width: 400px;
-    margin: auto;
-    padding-top: 40px;
-
+.formulario1 {
+  width: 400px;
+  margin: auto;
+  padding-top: 40px;
 }
 
-.card{
-    box-shadow: 1px 1px 5px #ccc;
-    background-color: white;
-    padding: 30px;
-    border-radius: 5px;
+.card {
+  box-shadow: 1px 1px 5px #ccc;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-.card-top{
-    text-align: center;
+.card-top {
+  text-align: center;
 }
 
-.card-group{
-    margin-bottom: 10px;
+.card-group {
+  margin-bottom: 10px;
 }
 
-.card-group > label{
-    width: 100%;
-    color: black;
-    display: block;
+.card-group > label {
+  width: 100%;
+  color: black;
+  display: block;
 }
 
-.card-group > input{
-    border-radius: 5px;
-    outline: 0;
-    width: 100%;
-    height: 35px;
-    padding: 5px;
+.card-group > input {
+  border-radius: 5px;
+  outline: 0;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
 }
 
-.card-group > button{
-    background-image: linear-gradient(to right, skyblue, blue);
-    width: 100%;
-    border-radius: 30px;
-    padding: 15px;
-    color: white;
-    border: 0;
-    outline: 0;
+.card-group > button {
+  background-image: linear-gradient(to right, skyblue, blue);
+  width: 100%;
+  border-radius: 30px;
+  padding: 15px;
+  color: white;
+  border: 0;
+  outline: 0;
 }
 
-.btn button:hover{
-    background-image: linear-gradient(to right, blue, skyblue);
+.btn button:hover {
+  background-image: linear-gradient(to right, blue, skyblue);
 }
 
-.imglogin{
-    border-radius: 50px;
-    width: 100px;
-    box-shadow: 1px 1px 5px #ccc;
+.imglogin {
+  border-radius: 50px;
+  width: 100px;
+  box-shadow: 1px 1px 5px #ccc;
 }
 
-.title{
+.title {
     color: skyblue;
 }

@@ -24,11 +24,9 @@ body {
   border: none;
   font-size: 25px;
   color: white;
-;
 }
 
 .jumbotron {
-
   border-radius: 10px;
 }
 
@@ -90,7 +88,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: lightgray;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .slider:before {

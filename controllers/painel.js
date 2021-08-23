@@ -1,16 +1,16 @@
-const express   = require('express');
+const express   = require("express");
 const router    = express.Router();
 
 router.get('/', function (request, response, next) {
     let data = {
-        title: 'Easy Control - Painel'
+        title: "Easy Control - Painel"
     }
     if (request.session.loggedin) {
-		response.setHeader('Content-Type','text/html')
-        response.render('painel.html', data);
-		response.end()
+		response.setHeader("Content-Type","text/html")
+        response.render("painel.html", data);
+		response.end();
     } else {
-        response.redirect('/login');
+        response.redirect("/login");
     }
 });
 
