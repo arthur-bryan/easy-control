@@ -1,40 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Control | Login</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/painel.css">
-    <link rel="stylesheet" href="../static/css/all.min.css">
-</head>
 
-<body>
-    <form class='formulario1' action="">
-        <div class='card'>
-            <div class="card-top"> 
-                <img class="imglogin" src="../static/img/easyimg.jpg" alt="">
-                <h2 class="title"> Easy Control </h2>
-                <p>Controle de sensores e eletrodomésticos remotamente!</p>
-            </div>    
-        
-            <div class="card-group"> 
-                <label>Usuário</label>
-                <input type="text" name="Usuário" placeholder="Digite seu usuário" required>
-            </div>
-             
-            <div class="card-group">
-                <label>Senha</label>
-                <input type="password" name="Senha" placeholder="Digite sua senha" required>    
-            </div>
-            
-            <div class="card-group btn">
-                <button type="submit">ACESSAR</button>
-            </div>
-        
+{% extends "layout.html" %}
+
+{% block content %}
+<form class="formulario1" action="auth" method="POST">
+    <div class='card'>
+        <div class="card-top"> 
+            <img class="imglogin" src={{ data.img }} alt="">
+            <h2 class="title"> Easy Control </h2>
+            <p>Controle de sensores e eletrodomésticos remotamente!</p>
+        </div>    
+	    <div class="card-group"> 
+    	    <label>Usuário</label>
+         <input type="text" name="usuario" placeholder="Digite seu usuário" required>
         </div>
-    </form>
-</body>
-</html>
+         
+	    <div class="card-group">
+	        <label>Senha</label>
+	        <input type="password" name="senha" placeholder="Digite sua senha" required>    
+	    </div>
+	    <div class="card-group btn">
+    	    <button type="submit">Acessar</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
