@@ -1,12 +1,12 @@
 body {
   background-color: #bee6e7f5;
   font-family: sans-serif;
-  padding-top: 2%;
 }
 
 .formulario1 {
   width: 400px;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 40px;
 }
 
 .card {

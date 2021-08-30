@@ -13,34 +13,39 @@ let connection = mysql.createConnection({
 });
 
 router.get("/", function (request, response, next) {
-    response.render("login", {data:{
-		title: "Easy Control | Login",
-		img: "img/easyimg.jpg"
-		}
-	});
-});
+    let data = {
+        title: "Easy Control - Login"
+    };
+    response.render("login.html", data);
+    }
+);
 
 router.post("/", function (request, response, next) {
-	console.log("on post");
     var usuario = request.body.username;
     var senha = request.body.password;
-//    if (usuario && senha) {
-//        connection.query("SELECT * FROM contas WHERE usuario = ? AND senha = ?", [usuario, senha], function (error, results, fields) {
-//            if (results.length > 0) {
-//                request.session.loggedin = true;
-//                request.session.username = usuario;
-                response.render("painel", {usuario, senha});
-//				response.locals.username = usuario;
-//				next();
-//			} else {
-//                response.send("Incorrect Username and/or Password!");
-//			}
-//        });
-//    } else {
-//        response.send("Preencha todos os campos!");
-//		response.redirect("painel");
-//        response.end();
-//    }
+    if (usuario && senha) {
+        connection.query("SELECT * FROM contas WHERE usuario = ? AND senha = ?", [usuario, senha], function (error, results, fields) {
+            if (results.length > 0) {
+                request.session.loggedin = true;
+                request.session.username = usuario;
+                response.redirect("painel");
+				response.locals.username = usuario;
+				next();
+			} else {
+                response.send("Incorrect Username and/or Password!");
+			}
+        });
+    } else {
+        response.send("Preencha todos os campos!");
+		response.redirect("painel");
+        response.end();
+    }
+});
+
+router.use(function (err, reqquest, response, next) {
+    if (err) {
+        console.log(err);
+    }
 });
 
 module.exports = router;
