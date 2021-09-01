@@ -32,7 +32,7 @@ router.post("/", function (request, response, next) {
 				response.locals.username = usuario;
 				next();
 			} else {
-                response.send("Incorrect Username and/or Password!");
+                response.send("Incorreto nome de ususario e/ou senha!");
 			}
         });
     } else {
