@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Easy Control - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"> <i class="fas fa-laptop-house"></i> Easy Control</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ">
+            	<li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    	<i class="fas fa-user-alt"></i>{{ data.username }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Add user</a></li>
+                        <li><a class="dropdown-item" href="#">Remove user</a></li>
+                        <li><div class="dropdown-divider"></div></li>
+                    	<li><a class="dropdown-item" href="#">Logout</a></li>
+                	</ul>
+            	</li>
+            </ul>
+	    </div>
+	</nav>
+	<form class="formulario1" action="auth" method="POST">
+	    <div class='card'>
+	        <div class="card-top"> 
+	            <img class="imglogin" src="img/easyimg.jpg" alt="">
+	            <h2 class="title"> Easy Control </h2>
+	            <p>Controle de sensores e eletrodomésticos remotamente!</p>
+	        </div>    
+		    <div class="card-group"> 
+	    	    <label>Usuário</label>
+	         <input type="text" name="usuario" placeholder="Digite seu usuário" required>
+	        </div>
+	         
+		    <div class="card-group">
+		        <label>Senha</label>
+		        <input type="password" name="senha" placeholder="Digite sua senha" required>    
+		    </div>
+		    <div class="card-group btn">
+	    	    <button type="submit">Acessar</button>
+	        </div>
+	    </div>
+	</form>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

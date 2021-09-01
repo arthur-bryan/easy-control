@@ -3,7 +3,16 @@
   src: url("../fonts/Righteous-Regular.ttf") format('truetype');
 }
 
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
+  height: 100%;
+  margin: 0;
+  padding-top: 10%;
+  padding-bot: 10%;
   font-family: Righteous, cursive;
   background-color: #bee6e7f5;
 }
@@ -26,51 +35,47 @@ body {
   color: white;
 }
 
-.jumbotron {
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  height: auto;
+  padding: 1% 2%;
+  background-color: white;
   border-radius: 10px;
 }
 
-#jumb {
-  margin-top: 4%;
-  background-color: white;
-  height: 450px;
-  padding: 4%;
-}
 
-.container_objeto {
+.item {
+  padding: 2%;
   color: white;
   background-color: forestgreen;
-  height: 23%;
-  margin-bottom: 3%;
   font-size: 25px;
   font-weight: bold;
   border-radius: 10px;
+  height: 60px;
 }
 
 .objeto {
-  position: relative;
-  top: 10px;
-  left: 5%;
+  display: inline;
+  position: absolute;
+  margin: 0 2%;
 }
 
 .edit-button {
   background-image: linear-gradient(to right, royalblue, deepskyblue);
   color: darkslategray;
-  width: 60px;
+  width: 45px;
   position: relative;
-  display: inline-block;
+  display: inline;
   float: right;
-  top: 10px;
-  right: 5px;
+  margin: 0 2%;
   border-radius: 36px;
-  margin-right: 5px;
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  top: 13px;
-  left: 5px;
   width: 70px;
 }
 
