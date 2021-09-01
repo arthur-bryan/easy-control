@@ -6,6 +6,7 @@ const session       = require("express-session");
 const bodyParser    = require("body-parser");
 const loginRoute    = require("./controllers/login");
 const painelRoute   = require("./controllers/painel");
+const authRoute		= require("./controllers/auth");
 
 let port = 9000;
 
@@ -26,6 +27,7 @@ app.use(session({
 app.use("/", loginRoute);
 app.use("/login", loginRoute);
 app.use("/painel", painelRoute);
+app.use("/auth", authRoute);
 
 nunjucks.configure(["views/templates"], {
     autoescape: true,
@@ -34,4 +36,4 @@ nunjucks.configure(["views/templates"], {
 });
 
 app.listen(port) ;
-console.log("Listening on port %s...", port);
+console.log("App rodando na porta %s...", port);

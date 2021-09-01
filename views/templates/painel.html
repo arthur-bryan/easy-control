@@ -1,63 +1,118 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Easy Control | Painel de Controle </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/painel.css">
-    <link rel="stylesheet" href="../static/css/all.min.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"> <i class="fas fa-laptop-house"></i> Easy Control</a>
-        <a href="#" class="navbar-nav ml-auto"> <i class="fas fa-user-alt"></i> </a>
-    </nav>
-    <div class="container">
-      <div id="jumb" class="jumbotron">
-        <div class="row" id="data">
+{% extends "layout.html" %}
 
-        </div>
-      </div>
-    </div>
-  </body>
-  <script src="../static/js/jquery-3.6.0.min.js"></script>
-  <script src="../static/js/all.min.js"></script>
-  <script src="../static/js/bootstrap.min.js"></script>
-  <script>
-    fetch('../modulos/dados.json').then(function (response) {
-      return response.json();
-    }).then(function (dados) {
-      appendDados(dados);
-    }).catch(function (err) {
-      console.log('error: ' + err);
-    });
+{% block content %}
 
-    function appendDados(data) {
-      var mainContainer = document.getElementById('data');
-      for (dados of data){
-        var div = document.createElement("div");
-        row = `<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="container_objeto">
-                  <p>
-                      <label class="switch">
+	<div class="container-fluid">
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+            <div class="col">
+				<p class="item">
+	            	<label class="switch">
+	                	<input type="checkbox">
+	                    	<span class="slider round"></span>
+	                   	</label>
+	                    <b class="objeto"> Lâmpada Sala 1 </b>
+	                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+	                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+				</p>
+			</div>
+            <div class="col">
+                <p class="item">
+                     <label class="switch">
                         <input type="checkbox">
                         <span class="slider round"></span>
-                      </label>
-                      <b class="objeto"> ${dados.nome} </b>
-                      <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
-                      <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
-                      <b class="objeto"> ${dados.status} </b>
-                      <b class="objeto"> ${dados.gpio} </b>
+                    </label>
+                    <b class="objeto"> Lâmpada Sala 2 </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                    </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Lâmpada Terraço </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+          	<div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Lâmpada Quintal</b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Lâmpada Banheiro </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+            </div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Ventilador 1 </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Ventilador 2 </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Portão Garagem </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Câmera Sala </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+			</div>
+	        <div class="col">
+                <p class="item">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <b class="objeto"> Câmera Fora </b>
+                    <button type="submit" class="edit-button"><i class="far fa-save"></i></button>
+                    <button type="submit" class="edit-button"><i class="fas fa-cog"></i></button>
+                </p>
+            </div>
 
-                  </p>
-                </div>
-              </div>`
-              
-        div.innerHTML = row;
-        mainContainer.appendChild(div)
-      }
-    }
-  </script>
-</html>
+{% endblock %}
