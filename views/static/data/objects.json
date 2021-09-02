@@ -1,0 +1,52 @@
+[
+    {
+	    "name": "Lâmpada Sala 1",
+	    "status": true,
+	    "gpio": 2
+    },
+    {
+	    "name": "Lâmpada Sala 2",
+	    "status": false,
+	    "gpio": 5
+    },
+    {
+	    "name": "Lâmpada Terraço",
+	    "status": false,
+	    "gpio": 7
+    },
+    {
+    	"name": "Lâmpada Quintal",
+	    "status": false,
+    	"gpio": 8
+    },
+    {
+	    "name": "Lâmpada Banheiro",
+	    "status": false,
+	    "gpio": 13
+    },
+    {
+	    "name": "Ventilador 1",
+	    "status": false,
+	    "gpio": 16
+    },
+    {
+	    "name": "Ventilador 2",
+	    "status": false,
+	    "gpio": 19
+    },
+    {
+	    "name": "Portão Garagem",
+	    "status": false,
+	    "gpio": 20
+    },
+    {
+	    "name": "Camera Sala",
+    	"status": false,
+	    "gpio": 22
+    },
+    {
+	    "name": "Camara Frente",
+	    "status": false,
+	    "gpio": 23
+    }
+]
