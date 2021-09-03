@@ -12,7 +12,6 @@ body {
   height: 100%;
   margin: 0;
   padding-top: 10%;
-  padding-bot: 10%;
   font-family: Righteous, cursive;
   background-color: #bee6e7f5;
 }
@@ -62,7 +61,7 @@ body {
   margin: 0 2%;
 }
 
-.edit-button {
+#edit-button {
   background-image: linear-gradient(to right, royalblue, deepskyblue);
   color: darkslategray;
   width: 45px;
@@ -73,7 +72,7 @@ body {
   border-radius: 36px;
 }
 
-.save-button {
+#save-button {
   background-image: linear-gradient(to right, royalblue, deepskyblue);
   color: darkslategray;
   width: 45px;
@@ -82,6 +81,14 @@ body {
   float: right;
   margin: 0 2%;
   border-radius: 36px;
+}
+
+.dropdown-toggle{
+  float: right;
+}
+
+.dropdown-menu{
+  float: right;
 }
 
 
