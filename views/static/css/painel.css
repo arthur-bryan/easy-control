@@ -83,6 +83,13 @@ body {
   border-radius: 36px;
 }
 
+.dropdown-toggle{
+  float: right;
+}
+
+.dropdown-menu{
+  float: right;
+}
 
 .switch {
   position: relative;
