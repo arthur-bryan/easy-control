@@ -26,7 +26,7 @@ class ObjectsPanel {
     const col = `<div object-data="${object.name}" class="col">
         <p class="item">
             <label class="switch">
-                <input type="checkbox" value=true checkboxStatus ? checked : null>
+		        <input class="status-checkbox" object-gpio="${object.gpio}" onclick="window.location.assign('/gpio/${object.gpio}/${!object.status}')" type="checkbox">
                 <span class="slider round"></span>
             </label>
             <b class="name">${object.name}</b>
@@ -37,9 +37,25 @@ class ObjectsPanel {
     this.panelContent.insertAdjacentHTML('afterbegin', col)
 
     const name = document.querySelector(`div[object-data='${object.name}'] .name`)
+	const gpio = document.querySelector(`div[object-data='${object.name}'] .status-checkbox`).getAttribute('object-gpio')
+	const status_checkbox = document.querySelector(`div[object-data='${object.name}'] .status-checkbox`)
+    this.showPinStatus(status_checkbox, gpio)
     const edit_button = document.querySelector(`div[object-data='${object.name}'] .edit-button`)
 	this.loadEditNameEvent(edit_button)
 
+  }
+
+  showPinStatus(status_checkbox, gpio) {
+	status_checkbox.addEventListener('change', () => {
+      const div = status_checkbox.parentNode.parentNode
+
+      const field = div.querySelector(".status-checkbox")
+	  this.changePinStatus(field, gpio)
+	})
+  }
+
+  changePinStatus(field, gpio) {
+      window.alert(field.checked + " " + gpio)
   }
 
   loadEditNameEvent(edit_button) {
@@ -83,3 +99,4 @@ class ObjectsPanel {
 }
 
 const objects = new ObjectsPanel();
+

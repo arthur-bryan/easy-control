@@ -1,12 +1,14 @@
+'use strict';
 const express       = require( "express");
 const app           = express();
 const nunjucks      = require("nunjucks");
 const path          = require("path");
 const session       = require("express-session");
 const bodyParser    = require("body-parser");
-const loginRoute    = require("./controllers/login");
-const painelRoute   = require("./controllers/painel");
-const authRoute		= require("./controllers/auth");
+const loginRoute    = require("./routes/login");
+const painelRoute   = require("./routes/painel");
+const authRoute		= require("./routes/auth");
+const changeRoute	= require("./routes/change");
 
 let port = 9000;
 
@@ -27,7 +29,8 @@ app.use(session({
 app.use("/", loginRoute);
 app.use("/login", loginRoute);
 app.use("/painel", painelRoute);
-app.use("/auth", authRoute);
+app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/change", changeRoute);
 
 nunjucks.configure(["views/templates"], {
     autoescape: true,
