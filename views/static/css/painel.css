@@ -12,7 +12,6 @@ body {
   height: 100%;
   margin: 0;
   padding-top: 10%;
-  padding-bot: 10%;
   font-family: Righteous, cursive;
   background-color: #bee6e7f5;
 }
@@ -39,7 +38,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
-  height: auto;
+  height: 80%;
   padding: 1% 2%;
   background-color: white;
   border-radius: 10px;
@@ -56,7 +55,7 @@ body {
   height: 60px;
 }
 
-.objeto {
+.name {
   display: inline;
   position: absolute;
   margin: 0 2%;
@@ -71,6 +70,25 @@ body {
   float: right;
   margin: 0 2%;
   border-radius: 36px;
+}
+
+.save-button {
+  background-image: linear-gradient(to right, royalblue, deepskyblue);
+  color: darkslategray;
+  width: 45px;
+  position: relative;
+  display: inline;
+  float: right;
+  margin: 0 2%;
+  border-radius: 36px;
+}
+
+.dropdown-toggle{
+  float: right;
+}
+
+.dropdown-menu{
+  float: right;
 }
 
 .switch {
