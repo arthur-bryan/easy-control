@@ -9,18 +9,33 @@
         			<p class="item">
 	            		<label class="switch">
 							{% if object.status %} 
-    	                    <input class="status-checkbox" object-gpio={{ object.gpio }} onclick='window.location.assign("/api/v1/change/{{ object.gpio }}/{{ object.status }}")' type="checkbox" checked>
+    	                    <input class="status-checkbox" onclick='window.location.assign("/api/v1/change/object/status/{{ object.gpio }}/{{ object.status }}")' type="checkbox" checked>
 							{% else %}
-    	                    <input class="status-checkbox" object-gpio={{ object.gpio }} onclick='window.location.assign("/api/v1/change/{{ object.gpio }}/{{ object.status }}")' type="checkbox">
+    	                    <input class="status-checkbox" onclick='window.location.assign("/api/v1/change/object/status/{{ object.gpio }}/{{ object.status }}")' type="checkbox">
 							{% endif %}
 							<span class="slider round"></span>
             			</label>
-    	        		<b class="name">{{ object.name }}</b>
-	            		<button type="submit" id="edit-btn" class="edit-button"><i class="fas fa-cog"></i></button>
+    	        		<b id="object-{{ object.gpio }}" class="name">{{ object.name }} </b>
+    					<textarea id="my-textarea" style="display:none"></textarea>
+	            		<button onclick="editObjectName('{{ object.gpio }}')"type="submit" id="edit-btn" class="edit-button"><i class="fas fa-cog"></i></button>
         			</p>
     			</div>
 			{% endfor %}
         </div>
     </div>
+
+	<script>
+	    function editObjectName(gpio){
+			var element = document.getElementById("object-"+gpio);
+			if (element.isContentEditable) {
+		        document.getElementById("my-textarea").value = element.innerHTML;
+				element.setAttribute("contenteditable", "false");
+				window.location.assign("/api/v1/change/object/name/"+gpio+"/"+element.innerHTML);
+			} else {
+				element.setAttribute("contenteditable", "true");
+				element.focus();
+			}
+	    }
+	</script>
 
 {% endblock %}

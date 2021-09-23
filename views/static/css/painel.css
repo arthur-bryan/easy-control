@@ -44,7 +44,6 @@ body {
   border-radius: 10px;
 }
 
-
 .item {
   padding: 2%;
   color: white;
@@ -83,11 +82,11 @@ body {
   border-radius: 36px;
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
   float: right;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   float: right;
 }
 

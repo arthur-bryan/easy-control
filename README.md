@@ -24,7 +24,11 @@ git clone https://github.com/arthur-bryan/easy-control
 Instale as dependências do projeto:
 
 ```sh
-cd easy-control
+git clone https://github.com/zhaolei/WiringOP.git -b h3
+cd WiringOP
+chmod +x ./build
+sudo ./build
+cd ../easy-control
 npm i package.json
 ```
 
@@ -76,6 +80,12 @@ Reinicie o serviço MariaDB:
 
 ```sh
 systemctl restart mariadb && systemctl enable mariadb
+```
+
+Configure os pinos para o modo de output (necessário sempre que o Orange PI for reiniciado)
+
+```
+./setup-gpios.sh
 ```
 
 Inicie a aplicação:
