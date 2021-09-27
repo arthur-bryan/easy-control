@@ -1,15 +1,57 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("../fonts/Righteous-Regular.ttf") format('truetype');
+}
+
 html {
   height: 100%;
   margin: 0;
   padding-top: 0;
-};
+}
 
 body {
   height: 100%;
   margin: 0;
   background-color: #bee6e7f5;
-  font-family: sans-serif;
-  padding-top: 0;
+  font-family: Righteous, cursive;
+  padding-top: 10%;
+}
+
+.navbar-brand {
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  color: skyblue;
+}
+
+.navbar-toggler {
+  right: 15px;
+  position: absolute;
+}
+
+.navbar-collapse {
+  padding-left:0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    margin: 0;
+    padding-top: 25%;
+    font-family: Righteous, cursive;
+    background-color: #bee6e7f5;
+  }
+
+  .navbar-brand {
+    float: left;
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    color: skyblue;
+  }
 }
 
 .formulario1 {

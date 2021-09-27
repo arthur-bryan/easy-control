@@ -8,7 +8,9 @@ const bodyParser    = require("body-parser");
 const loginRoute    = require("./routes/login");
 const painelRoute   = require("./routes/painel");
 const authRoute		= require("./routes/auth");
-const changeRoute	= require("./routes/change");
+const logoutRoute	= require("./routes/logout");
+const changeObjStatusRoute	= require("./routes/change-obj-status");
+const changeObjNameRoute	= require("./routes/change-obj-name");
 
 let port = 9000;
 
@@ -30,7 +32,10 @@ app.use("/", loginRoute);
 app.use("/login", loginRoute);
 app.use("/painel", painelRoute);
 app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/change", changeRoute);
+app.use("/api/v1/logout", logoutRoute);
+app.use("/api/v1/change/object/status", changeObjStatusRoute);
+app.use("/api/v1/change/object/name", changeObjNameRoute);
+
 
 nunjucks.configure(["views/templates"], {
     autoescape: true,

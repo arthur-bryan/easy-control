@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 const User = require('../models/user');
 
 exports.authUser = function(request, response) {
@@ -10,13 +10,20 @@ exports.authUser = function(request, response) {
         	response.send(err);
         } else {
  			if (result.length > 0) {
-            	request.session.loggedin = true;
-            	request.session.username = username;
-           		response.redirect('/painel');
+				request.session.loggedin = true;
+				request.session.username = username;
+				response.redirect('/painel');
 	        } else {
         		response.redirect('/login');
         	}
 		}
         response.end();
     });
+};
+
+
+exports.logoutUser = function(request, response) {
+    request.session.loggedin = false;
+    response.redirect('/login');
+    response.end();
 };
