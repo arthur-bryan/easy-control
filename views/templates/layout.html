@@ -12,26 +12,27 @@
 </head>
 
 <body>
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"> <i class="fas fa-laptop-house"></i> Easy Control</a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="/painel"> <i class="fas fa-laptop-house"></i> Easy Control</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+	    <span class="navbar-toggler-icon"></span>
     </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto ">
-                        <li class="nav-item dropdown">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-md-auto dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user-alt"></i>{{ data.username }}
-                        </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Adicionar Usuário</a></li>
-                                <li><a class="dropdown-item" href="#">Remover Usuário</a></li>
-                                <li><div class="dropdown-divider"></div></li>
-                                <li><a class="dropdown-item" href="#">Sair</a></li>
-                        </ul>
-                </li>
+                    <i class="fas fa-user-alt"></i>  {{ data.username }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li>
+						<form action="/api/v1/logout" method="POST">
+	                		<button class="dropdown-item">Sair</a>
+						</form>
+					</li>
                 </ul>
-        </div>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 	{% block content %}

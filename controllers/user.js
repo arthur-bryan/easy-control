@@ -20,3 +20,10 @@ exports.authUser = function(request, response) {
         response.end();
     });
 };
+
+
+exports.logoutUser = function(request, response) {
+    request.session.loggedin = false;
+    response.redirect('/login');
+    response.end();
+};

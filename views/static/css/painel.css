@@ -1,39 +1,3 @@
-@font-face {
-  font-family: "Righteous";
-  src: url("../fonts/Righteous-Regular.ttf") format('truetype');
-}
-
-html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  padding-top: 10%;
-  font-family: Righteous, cursive;
-  background-color: #bee6e7f5;
-}
-
-.navbar-brand {
-  margin: auto;
-  font-size: 25px;
-  font-weight: bold;
-  color: skyblue;
-}
-
-.navbar-nav.ml-auto {
-  position: relative;
-  display: inline-block;
-  right: 2%;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  font-size: 25px;
-  color: white;
-}
-
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
@@ -45,6 +9,7 @@ body {
 }
 
 .item {
+  padding: 2%;
   padding: 2%;
   color: white;
   background-color: forestgreen;
@@ -69,25 +34,6 @@ body {
   float: right;
   margin: 0 2%;
   border-radius: 36px;
-}
-
-.save-button {
-  background-image: linear-gradient(to right, royalblue, deepskyblue);
-  color: darkslategray;
-  width: 45px;
-  position: relative;
-  display: inline;
-  float: right;
-  margin: 0 2%;
-  border-radius: 36px;
-}
-
-.dropdown-toggle {
-  float: right;
-}
-
-.dropdown-menu {
-  float: right;
 }
 
 .switch {
