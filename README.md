@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `password` varchar(64) NOT NULL
 ) AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO `accounts` (`username`, `password`) VALUES ('admin', 'admin@123');
+INSERT INTO `accounts` (`username`, `password`) VALUES ('admin', 'Admin@123');
 
 INSERT INTO `objects` (`name`, `gpio`, `status`) VALUES ('Lâmpada Sala 1', 2, 0);
 INSERT INTO `objects` (`name`, `gpio`, `status`) VALUES ('Lâmpada Sala 2', 5, 0);
@@ -93,6 +93,10 @@ Inicie a aplicação:
 ```sh
 node app.js
 ```
+
+##### Por padrão , as credenciais de login são:
+Usuário: admin
+Senha: Admin@123
 
 ## :movie_camera: Demonstração
 ![login](https://user-images.githubusercontent.com/34891953/134446683-042b659e-c96c-46be-bfcd-a3c11b27bbc1.png)
