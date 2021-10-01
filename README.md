@@ -9,9 +9,17 @@ Easy-Control é uma aplicação WEB que permite controlar eletrodomésticos e se
 ![GitHub repo size](https://img.shields.io/github/repo-size/arthur-bryan/easy-control)
 
 ## :page_facing_up: Requerimentos
+
+Neste projeto, fium micro computador [Orange Pi PC](http://www.orangepi.org/orangepipc/), que
+possui vários pinos digitais (de 3.3v, 5v e GNV) controláveis;
+Para realizar o controle de eletrodomésticos de alta voltagem (110v/220v), utiliza-se relés que são
+acionados pelo Orange PI, deixando passar a corrente para acionar os eletrodomésticos.
+
 - Orange Pi PC (não testado em outros modelos)
 - Módulos relé e demais componentes para controlar os eletrodomésticos
 - Objetos para serem controlados, ex: ventiladores, lâmpadas...
+
+![circuito](https://user-images.githubusercontent.com/34891953/135553268-dd96ca79-9ea8-451a-81ca-31a4060157db.png)
 
 ## :hammer_and_wrench: Instalação
 
